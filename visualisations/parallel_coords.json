@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {"url": "data/Students%20Social%20Media%20Addiction.csv"},
+  "width": "container",
+  "height": 320,
+  "transform": [
+    {"filter": "datum.Most_Used_Platform !== 'WeChat' && datum.Most_Used_Platform !== 'VKontakte' && datum.Most_Used_Platform !== 'LINE' && datum.Most_Used_Platform !== 'KakaoTalk' && datum.Most_Used_Platform !== 'WhatsApp'"},
+    {"filter": "datum.Avg_Daily_Usage_Hours"},
+    {
+      "aggregate": [
+        {"op": "mean", "field": "Avg_Daily_Usage_Hours",      "as": "Usage Hours"},
+        {"op": "mean", "field": "Sleep_Hours_Per_Night",       "as": "Sleep Hours"},
+        {"op": "mean", "field": "Mental_Health_Score",         "as": "Mental Health"},
+        {"op": "mean", "field": "Addicted_Score",              "as": "Addiction"},
+        {"op": "mean", "field": "Conflicts_Over_Social_Media", "as": "Conflicts"}
+      ],
+      "groupby": ["Most_Used_Platform"]
+    },
+    {"fold": ["Usage Hours", "Sleep Hours", "Mental Health", "Addiction", "Conflicts"], "as": ["axis", "value"]},
+    {
+      "joinaggregate": [
+        {"op": "min", "field": "value", "as": "min"},
+        {"op": "max", "field": "value", "as": "max"}
+      ],
+      "groupby": ["axis"]
+    },
+    {"calculate": "(datum.value - datum.min) / (datum.max - datum.min)", "as": "norm_val"},
+    {"calculate": "datum.axis === 'Usage Hours' ? 0 : datum.axis === 'Sleep Hours' ? 1 : datum.axis === 'Mental Health' ? 2 : datum.axis === 'Addiction' ? 3 : 4", "as": "axis_idx"}
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "opacity": 0.85,
+    "point": {"filled": true, "size": 60}
+  },
+  "encoding": {
+    "x": {
+      "field": "axis",
+      "type": "ordinal",
+      "sort": ["Usage Hours", "Sleep Hours", "Mental Health", "Addiction", "Conflicts"],
+      "axis": {
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
+        "labelColor": "#0d1b3e",
+        "tickSize": 0,
+        "domain": false,
+        "title": null,
+        "grid": true,
+        "gridColor": "#e8ecf4",
+        "gridWidth": 1.5
+      }
+    },
+    "y": {
+      "field": "norm_val",
+      "type": "quantitative",
+      "axis": {
+        "title": "← Less                                More →",
+        "titleFontSize": 11,
+        "titleColor": "#888888",
+        "labelExpr": "",
+        "tickCount": 5,
+        "gridOpacity": 0.2
+      },
+      "scale": {"domain": [-0.05, 1.1]}
+    },
+    "color": {
+      "field": "Most_Used_Platform",
+      "type": "nominal",
+      "title": "Platform",
+      "scale": {
+        "domain": ["LinkedIn", "Twitter", "Facebook", "YouTube", "Instagram", "Snapchat", "TikTok"],
+        "range": ["#2ecc71", "#1da1f2", "#1877f2", "#ff0000", "#c13584", "#ffb347", "#69c9d0"]
+      },
+      "legend": {
+        "orient": "right",
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "symbolStrokeWidth": 3,
+        "symbolSize": 100
+      }
+    },
+    "detail": {"field": "Most_Used_Platform", "type": "nominal"},
+    "order": {"field": "axis_idx", "type": "quantitative"}
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelFontSize": 12, "titleFontSize": 13, "domain": false},
+    "legend": {"labelFontSize": 11, "titleFontSize": 11}
+  },
+  "title": {
+    "text": "How Different Platforms Affect Students",
+    "fontSize": 15,
+    "fontWeight": 700,
+    "anchor": "start",
+    "color": "#0d1b3e",
+    "offset": 10
+  }
+}

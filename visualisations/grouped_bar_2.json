@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {"url": "data/Students%20Social%20Media%20Addiction.csv"},
+  "transform": [
+    {
+      "calculate": "datum.Country === 'Australia' ? 'Australia' : 'Global Average'",
+      "as": "Group"
+    },
+    {
+      "fold": ["Avg_Daily_Usage_Hours", "Sleep_Hours_Per_Night", "Mental_Health_Score", "Addicted_Score"],
+      "as": ["Metric", "Value"]
+    },
+    {
+      "calculate": "datum.Metric === 'Avg_Daily_Usage_Hours' ? 'Daily Usage' : datum.Metric === 'Sleep_Hours_Per_Night' ? 'Sleep' : datum.Metric === 'Mental_Health_Score' ? 'Mental Health' : 'Addiction Score'",
+      "as": "MetricLabel"
+    }
+  ],
+  "mark": "bar",
+  "width": "container",
+  "height": 280,
+  "encoding": {
+    "x": {
+      "field": "MetricLabel",
+      "type": "ordinal",
+      "title": null,
+      "sort": {"op": "mean", "field": "Value", "order": "ascending"},
+      "axis": {"labelAngle": 0, "labelFontSize": 12}
+    },
+    "xOffset": {
+      "field": "Group",
+      "type": "nominal",
+      "sort": ["Australia", "Global Average"]
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Average (hours / score out of 10)"
+    },
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "sort": ["Australia", "Global Average"],
+      "scale": {
+        "domain": ["Australia", "Global Average"],
+        "range": ["#2563eb", "#94a3b8"]
+      },
+      "legend": {"title": null, "orient": "top", "direction": "horizontal"}
+    }
+  },
+  "title": {
+    "text": "Australia vs the World",
+    "fontSize": 15,
+    "fontWeight": 700,
+    "anchor": "start",
+    "color": "#0d1b3e",
+    "offset": 10
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelFontSize": 12, "titleFontSize": 13, "domain": false, "gridOpacity": 0.25},
+    "legend": {"labelFontSize": 11, "titleFontSize": 11}
+  }
+}
