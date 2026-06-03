@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Study Disruptions by Platform",
+    "fontSize": 15,
+    "fontWeight": 700,
+    "anchor": "start",
+    "color": "#0d1b3e",
+    "offset": 10
+  },
+  "data": {
+    "url": "data/Social_Media_Impact_OnStudents.csv"
+  },
+  "transform": [
+    {
+      "calculate": "trim(datum.MostUsedPlatform)",
+      "as": "platform"
+    },
+    {
+      "filter": "datum.platform !== 'Others'"
+    },
+    {
+      "calculate": "trim(datum.Procrastination) === 'Often' || trim(datum.Procrastination) === 'Always' ? 1 : 0",
+      "as": "Procrastination"
+    },
+    {
+      "calculate": "trim(datum.TimeLost) === 'Often' || trim(datum.TimeLost) === 'Always' ? 1 : 0",
+      "as": "Time Lost"
+    },
+    {
+      "calculate": "trim(datum.NotificationDisruption) === 'Often' || trim(datum.NotificationDisruption) === 'Always' ? 1 : 0",
+      "as": "Notification Disruption"
+    },
+    {
+      "calculate": "trim(datum.StudyDelay) === 'Often' || trim(datum.StudyDelay) === 'Always' ? 1 : 0",
+      "as": "Study Delay"
+    },
+    {
+      "fold": [
+        "Procrastination",
+        "Time Lost",
+        "Notification Disruption",
+        "Study Delay"
+      ],
+      "as": [
+        "metric",
+        "value"
+      ]
+    }
+  ],
+  "width": "container",
+  "height": 240,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "metric",
+      "type": "ordinal",
+      "title": "Behaviour",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "platform",
+      "type": "ordinal",
+      "title": "Platform",
+      "sort": {
+        "op": "mean",
+        "field": "value",
+        "order": "descending"
+      }
+    },
+    "color": {
+      "aggregate": "mean",
+      "field": "value",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      },
+      "legend": {"title": null, "format": ".0%"}
+    }
+  },
+  "config": {
+    "view": {
+      "strokeWidth": 0,
+      "step": 45
+    },
+    "axis": {
+      "domain": false
+    }
+  }
+}

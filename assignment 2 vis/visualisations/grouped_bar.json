@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {"url": "data/Students%20Social%20Media%20Addiction.csv"},
+  "transform": [
+    {
+      "calculate": "datum.Avg_Daily_Usage_Hours < 3 ? 'Less than 3h' : datum.Avg_Daily_Usage_Hours < 5 ? '3 to 5h' : datum.Avg_Daily_Usage_Hours < 7 ? '5 to 7h' : 'More than 7h'",
+      "as": "UsageBin"
+    }
+  ],
+  "width": "container",
+  "height": 300,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "UsageBin",
+      "type": "ordinal",
+      "sort": ["Less than 3h", "3 to 5h", "5 to 7h", "More than 7h"],
+      "title": "Daily Social Media Usage",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "Sleep_Hours_Per_Night",
+      "type": "quantitative",
+      "title": "Avg Sleep Hours per Night",
+      "scale": {"domain": [0, 10]}
+    },
+    "xOffset": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {"paddingInner": 0, "paddingOuter": 0}
+    },
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Female", "Male"],
+        "range": ["#e05c47", "#4a90d9"]
+      },
+      "legend": {"orient": "top-right"}
+    }
+  },
+  "title": {
+    "text": "Social Media's Effect on Sleep",
+    "fontSize": 15,
+    "fontWeight": 700,
+    "anchor": "start",
+    "color": "#0d1b3e",
+    "offset": 10
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelFontSize": 12, "titleFontSize": 13, "domain": false, "gridOpacity": 0.25},
+    "legend": {"labelFontSize": 11, "titleFontSize": 11}
+  }
+}

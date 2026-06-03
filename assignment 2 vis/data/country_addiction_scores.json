@@ -1,0 +1,552 @@
+[
+  {
+    "id": 4,
+    "country": "Afghanistan",
+    "addiction": 5.0
+  },
+  {
+    "id": 8,
+    "country": "Albania",
+    "addiction": 7.0
+  },
+  {
+    "id": 20,
+    "country": "Andorra",
+    "addiction": 8.0
+  },
+  {
+    "id": 32,
+    "country": "Argentina",
+    "addiction": 8.0
+  },
+  {
+    "id": 51,
+    "country": "Armenia",
+    "addiction": 9.0
+  },
+  {
+    "id": 36,
+    "country": "Australia",
+    "addiction": 5.29
+  },
+  {
+    "id": 40,
+    "country": "Austria",
+    "addiction": 7.0
+  },
+  {
+    "id": 31,
+    "country": "Azerbaijan",
+    "addiction": 7.0
+  },
+  {
+    "id": 44,
+    "country": "Bahamas",
+    "addiction": 4.0
+  },
+  {
+    "id": 48,
+    "country": "Bahrain",
+    "addiction": 4.0
+  },
+  {
+    "id": 50,
+    "country": "Bangladesh",
+    "addiction": 7.5
+  },
+  {
+    "id": 112,
+    "country": "Belarus",
+    "addiction": 4.0
+  },
+  {
+    "id": 56,
+    "country": "Belgium",
+    "addiction": 8.0
+  },
+  {
+    "id": 64,
+    "country": "Bhutan",
+    "addiction": 8.0
+  },
+  {
+    "id": 68,
+    "country": "Bolivia",
+    "addiction": 4.0
+  },
+  {
+    "id": 70,
+    "country": "Bosnia",
+    "addiction": 4.0
+  },
+  {
+    "id": 76,
+    "country": "Brazil",
+    "addiction": 7.12
+  },
+  {
+    "id": 100,
+    "country": "Bulgaria",
+    "addiction": 4.0
+  },
+  {
+    "id": 124,
+    "country": "Canada",
+    "addiction": 6.71
+  },
+  {
+    "id": 152,
+    "country": "Chile",
+    "addiction": 4.0
+  },
+  {
+    "id": 156,
+    "country": "China",
+    "addiction": 6.12
+  },
+  {
+    "id": 170,
+    "country": "Colombia",
+    "addiction": 7.0
+  },
+  {
+    "id": 188,
+    "country": "Costa Rica",
+    "addiction": 8.0
+  },
+  {
+    "id": 191,
+    "country": "Croatia",
+    "addiction": 7.0
+  },
+  {
+    "id": 196,
+    "country": "Cyprus",
+    "addiction": 6.0
+  },
+  {
+    "id": 203,
+    "country": "Czech Republic",
+    "addiction": 9.0
+  },
+  {
+    "id": 208,
+    "country": "Denmark",
+    "addiction": 4.3
+  },
+  {
+    "id": 218,
+    "country": "Ecuador",
+    "addiction": 9.0
+  },
+  {
+    "id": 818,
+    "country": "Egypt",
+    "addiction": 6.0
+  },
+  {
+    "id": 233,
+    "country": "Estonia",
+    "addiction": 7.0
+  },
+  {
+    "id": 246,
+    "country": "Finland",
+    "addiction": 5.38
+  },
+  {
+    "id": 250,
+    "country": "France",
+    "addiction": 5.15
+  },
+  {
+    "id": 268,
+    "country": "Georgia",
+    "addiction": 4.0
+  },
+  {
+    "id": 276,
+    "country": "Germany",
+    "addiction": 3.86
+  },
+  {
+    "id": 288,
+    "country": "Ghana",
+    "addiction": 7.0
+  },
+  {
+    "id": 300,
+    "country": "Greece",
+    "addiction": 5.0
+  },
+  {
+    "id": 344,
+    "country": "Hong Kong",
+    "addiction": 7.0
+  },
+  {
+    "id": 348,
+    "country": "Hungary",
+    "addiction": 7.0
+  },
+  {
+    "id": 352,
+    "country": "Iceland",
+    "addiction": 7.0
+  },
+  {
+    "id": 356,
+    "country": "India",
+    "addiction": 7.51
+  },
+  {
+    "id": 360,
+    "country": "Indonesia",
+    "addiction": 8.0
+  },
+  {
+    "id": 368,
+    "country": "Iraq",
+    "addiction": 4.0
+  },
+  {
+    "id": 372,
+    "country": "Ireland",
+    "addiction": 6.44
+  },
+  {
+    "id": 376,
+    "country": "Israel",
+    "addiction": 5.0
+  },
+  {
+    "id": 380,
+    "country": "Italy",
+    "addiction": 6.38
+  },
+  {
+    "id": 388,
+    "country": "Jamaica",
+    "addiction": 7.0
+  },
+  {
+    "id": 392,
+    "country": "Japan",
+    "addiction": 3.48
+  },
+  {
+    "id": 400,
+    "country": "Jordan",
+    "addiction": 8.0
+  },
+  {
+    "id": 398,
+    "country": "Kazakhstan",
+    "addiction": 7.0
+  },
+  {
+    "id": 404,
+    "country": "Kenya",
+    "addiction": 5.0
+  },
+  {
+    "id": 383,
+    "country": "Kosovo",
+    "addiction": 8.0
+  },
+  {
+    "id": 414,
+    "country": "Kuwait",
+    "addiction": 8.0
+  },
+  {
+    "id": 417,
+    "country": "Kyrgyzstan",
+    "addiction": 5.0
+  },
+  {
+    "id": 428,
+    "country": "Latvia",
+    "addiction": 8.0
+  },
+  {
+    "id": 422,
+    "country": "Lebanon",
+    "addiction": 9.0
+  },
+  {
+    "id": 438,
+    "country": "Liechtenstein",
+    "addiction": 9.0
+  },
+  {
+    "id": 440,
+    "country": "Lithuania",
+    "addiction": 5.0
+  },
+  {
+    "id": 442,
+    "country": "Luxembourg",
+    "addiction": 8.0
+  },
+  {
+    "id": 458,
+    "country": "Malaysia",
+    "addiction": 6.5
+  },
+  {
+    "id": 462,
+    "country": "Maldives",
+    "addiction": 6.68
+  },
+  {
+    "id": 470,
+    "country": "Malta",
+    "addiction": 4.0
+  },
+  {
+    "id": 484,
+    "country": "Mexico",
+    "addiction": 7.37
+  },
+  {
+    "id": 498,
+    "country": "Moldova",
+    "addiction": 8.0
+  },
+  {
+    "id": 492,
+    "country": "Monaco",
+    "addiction": 7.0
+  },
+  {
+    "id": 499,
+    "country": "Montenegro",
+    "addiction": 5.0
+  },
+  {
+    "id": 504,
+    "country": "Morocco",
+    "addiction": 7.0
+  },
+  {
+    "id": 524,
+    "country": "Nepal",
+    "addiction": 6.63
+  },
+  {
+    "id": 528,
+    "country": "Netherlands",
+    "addiction": 4.38
+  },
+  {
+    "id": 554,
+    "country": "New Zealand",
+    "addiction": 5.88
+  },
+  {
+    "id": 566,
+    "country": "Nigeria",
+    "addiction": 8.0
+  },
+  {
+    "id": 807,
+    "country": "North Macedonia",
+    "addiction": 6.0
+  },
+  {
+    "id": 578,
+    "country": "Norway",
+    "addiction": 8.0
+  },
+  {
+    "id": 512,
+    "country": "Oman",
+    "addiction": 7.0
+  },
+  {
+    "id": 586,
+    "country": "Pakistan",
+    "addiction": 7.42
+  },
+  {
+    "id": 591,
+    "country": "Panama",
+    "addiction": 5.0
+  },
+  {
+    "id": 600,
+    "country": "Paraguay",
+    "addiction": 7.0
+  },
+  {
+    "id": 604,
+    "country": "Peru",
+    "addiction": 8.0
+  },
+  {
+    "id": 608,
+    "country": "Philippines",
+    "addiction": 7.0
+  },
+  {
+    "id": 616,
+    "country": "Poland",
+    "addiction": 6.5
+  },
+  {
+    "id": 620,
+    "country": "Portugal",
+    "addiction": 8.0
+  },
+  {
+    "id": 634,
+    "country": "Qatar",
+    "addiction": 7.0
+  },
+  {
+    "id": 642,
+    "country": "Romania",
+    "addiction": 8.0
+  },
+  {
+    "id": 643,
+    "country": "Russia",
+    "addiction": 6.43
+  },
+  {
+    "id": 674,
+    "country": "San Marino",
+    "addiction": 4.0
+  },
+  {
+    "id": 688,
+    "country": "Serbia",
+    "addiction": 6.0
+  },
+  {
+    "id": 702,
+    "country": "Singapore",
+    "addiction": 7.0
+  },
+  {
+    "id": 703,
+    "country": "Slovakia",
+    "addiction": 3.0
+  },
+  {
+    "id": 705,
+    "country": "Slovenia",
+    "addiction": 8.0
+  },
+  {
+    "id": 710,
+    "country": "South Africa",
+    "addiction": 4.0
+  },
+  {
+    "id": 410,
+    "country": "South Korea",
+    "addiction": 5.85
+  },
+  {
+    "id": 724,
+    "country": "Spain",
+    "addiction": 7.3
+  },
+  {
+    "id": 144,
+    "country": "Sri Lanka",
+    "addiction": 5.79
+  },
+  {
+    "id": 752,
+    "country": "Sweden",
+    "addiction": 3.0
+  },
+  {
+    "id": 756,
+    "country": "Switzerland",
+    "addiction": 4.3
+  },
+  {
+    "id": 760,
+    "country": "Syria",
+    "addiction": 8.0
+  },
+  {
+    "id": 158,
+    "country": "Taiwan",
+    "addiction": 4.0
+  },
+  {
+    "id": 762,
+    "country": "Tajikistan",
+    "addiction": 7.0
+  },
+  {
+    "id": 764,
+    "country": "Thailand",
+    "addiction": 8.0
+  },
+  {
+    "id": 780,
+    "country": "Trinidad",
+    "addiction": 8.0
+  },
+  {
+    "id": 792,
+    "country": "Turkey",
+    "addiction": 7.33
+  },
+  {
+    "id": 784,
+    "country": "UAE",
+    "addiction": 8.12
+  },
+  {
+    "id": 826,
+    "country": "UK",
+    "addiction": 7.23
+  },
+  {
+    "id": 840,
+    "country": "USA",
+    "addiction": 8.6
+  },
+  {
+    "id": 804,
+    "country": "Ukraine",
+    "addiction": 7.0
+  },
+  {
+    "id": 858,
+    "country": "Uruguay",
+    "addiction": 6.0
+  },
+  {
+    "id": 860,
+    "country": "Uzbekistan",
+    "addiction": 8.0
+  },
+  {
+    "id": 336,
+    "country": "Vatican City",
+    "addiction": 7.0
+  },
+  {
+    "id": 862,
+    "country": "Venezuela",
+    "addiction": 5.0
+  },
+  {
+    "id": 704,
+    "country": "Vietnam",
+    "addiction": 5.0
+  },
+  {
+    "id": 887,
+    "country": "Yemen",
+    "addiction": 7.0
+  }
+]
